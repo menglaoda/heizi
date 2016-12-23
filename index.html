@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.inp{
+				border: 1px solid black;
+			}
+		</style>
+		<script>
+		onload=function(){
+			var btn = document.querySelector(".inp");
+			var txt = document.querySelector(".ha");
+			var Height = document.body.offsetHeight;
+			btn.onfocus = function(evt){
+				var oEvent = evt || event;
+				console.log(Height);
+				console.log(btn.offsetTop);
+				console.log(btn.clientTop);
+				btn.style.cssText="position: fixed;";
+				btn.style.bottom = 0+"px";
+			}
+				btn.onblur = function(evt){
+					var oEvent = evt || event;
+					
+					btn.style.removeProperty("position");
+				}
+		}
+			
+		</script>
+	</head>
+	<body>
+		<div>
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>4</p>
+			<p>5</p>
+			<input type="text" class="inp"/>
+			<p>6</p>
+			<p>7</p>
+			<p>8</p>
+			<p>9</p>
+			<p>10</p>
+			<p>11</p>
+			<p>12</p>
+			<p>13</p>
+		</div>
+		
+		
+	</body>
+</html>
